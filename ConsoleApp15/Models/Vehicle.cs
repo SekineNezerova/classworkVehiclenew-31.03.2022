@@ -14,9 +14,13 @@ namespace ConsoleApp15.Models
         public int DrivePath { get; set; }
 
 
-        public abstract double AverageSpeed();
+        public double AverageSpeed(double speed)
+        {
+            speed = DrivePath / DriveTime;
+            return speed;
+        }
 
-        public abstract string ShowInfo();
+        public abstract void ShowInfo();
        
     }
     

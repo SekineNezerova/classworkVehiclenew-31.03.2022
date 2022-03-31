@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp15.Models
 {
-    class Car:Vehicle
+    class Car:Vehicle,ITransmission,IWheel,IEngine
     {
         public int DoorCount { get; set; }
         public int WinCode { get; set; }
+        public string TransmissionKind { get; set; }
+        public int WheelThickness { get; set; }
+        public int HorsePower { get; set; }
+        public int TankSize { get; set; }
+        public int CurrentFuel { get; set; }
+        public string FuelType { get; set; }
+        
 
-        public override double AverageSpeed()
+        public void LeftFuelAmount()
         {
-            return DrivePath / DriveTime;
+            throw new NotImplementedException();
         }
 
-        public override string ShowInfo()
+        public override void ShowInfo()
         {
-            return $"doorcount-{DoorCount}-wincode-{WinCode}";
+            Console.WriteLine($@"
+                {DoorCount}-DoorCount
+                {WinCode}-Wincode
+                {TankSize}-TankSize
+                {TransmissionKind}-TransmissionKind
+                {WheelThickness}-WheelThickness
+                {HorsePower}-HorsePower
+                {CurrentFuel}-CurrentFuel
+                {FuelType}-FuelType");
         }
     }
 }

@@ -9,11 +9,11 @@ namespace ConsoleApp15.Models
     interface IEngine
     {
         public int HorsePower { get; set; }
-        public int FuelRate { get; set; }
+        public int TankSize { get; set; }
 
         public int CurrentFuel { get; set; }
 
-        public int FuelType { get; set; }
+        public string FuelType { get; set; }
         void LeftFuelAmount();
 
     }

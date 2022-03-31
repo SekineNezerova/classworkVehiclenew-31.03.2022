@@ -8,10 +8,13 @@ namespace ConsoleApp15
         static void Main(string[] args)
         {
             Car car = new Car();
-            car.ShowInfo();
             car.DoorCount = 4;
             car.WinCode = 869668;
-            Console.WriteLine(car.ShowInfo());
+            car.TransmissionKind = "Automatic";
+            car.HorsePower = 500;
+            car.WheelThickness = 20;
+            car.ShowInfo();
+            
           
           
         }

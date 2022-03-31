@@ -8,6 +8,6 @@ namespace ConsoleApp15.Models
 {
     interface ITransmission
     {
-        public int TransmissionKind { get; set; }
+        public string TransmissionKind { get; set; }
     }
 }
